@@ -1,3 +1,18 @@
+// Otra manera de agregar templates
+const template = document.createElement('div');
+template.innerHTML = `
+    <style>
+        .texto {
+            color: red;
+        }
+        p {
+            color: blue;
+        }
+    </style>
+    <p>Hola mundo 2 !!<p>
+    <p class="texto">texto ejemplo para la clase<p>
+`;
+
 class myElement extends HTMLElement {
     constructor(){
         super();
@@ -10,6 +25,7 @@ class myElement extends HTMLElement {
         this.p.textContent = "Hola mundo !!";
         // aquí se agrega al DOM
         this.appendChild(this.p);
+        this.appendChild(template);
     }
 }
 
