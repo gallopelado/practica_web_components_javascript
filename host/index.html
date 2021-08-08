@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Elements</title>
+</head>
+<body>
+    
+    <my-element>
+        <span slot="title">Ingresando con slot en title 1</span>
+        <span slot="paragraph">Ingresando con slot en el párrafo</span>
+    </my-element>
+    <my-element class="blue">
+        <span slot="title">Ingresando con slot en title 2</span>
+        <span slot="paragraph">Ingresando con slot en el párrafo</span>
+    </my-element>
+    <my-element yellow>
+        <span slot="title">Ingresando con slot en title 3</span>
+        <span slot="paragraph">Ingresando con slot en el párrafo</span>
+    </my-element>
+
+    <article class="card">
+        <my-element yellow>
+            <span slot="title">Ingresando con slot en title 4</span>
+            <span slot="paragraph">Ingresando con slot en el párrafo</span>
+        </my-element>
+    </article>
+
+    <script src="./my-element.js" type="module"></script>
+</body>
+</html>
